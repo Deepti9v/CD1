@@ -3,32 +3,43 @@
  margin: 4px;
  padding: 4px;
 }
-#header{
- height: 150px;
- border-radius: 25px;
- background-color: green;
+body
+{
+color: white;
 }
-#navigation{
- height: 400px;
- width: 200px;
- background-color: blue;
+a
+{
+  color: lightblue;
+}
+#header{
+ height: 60px;
+ border-radius: 25px;
+ background-color: red;
+}
+.left{
+ height: 350px;
+ width: 220px;
+ background-color: teal;
  border-radius: 25px;
  display: inline-block;
 }
-#main_content{
- height: 400px;
- width: 830px;
- background-color: red;
+#main{
+ height: 500px;
+ width: 950px;
+ background-color: black;
  border-radius: 25px;
  display: inline-block;
  vertical-align: top;
 }
-#advertisement{
- height: 120px;
- width: 100%;
+#footer{
+ height: 30px;
  background-color: purple;
  border-radius: 25px;
 }
 #wrapper{
-  background-color: silver;
+  background-color: #006666;
+}
+.blue_text
+{
+  color: darkblue;
 }
