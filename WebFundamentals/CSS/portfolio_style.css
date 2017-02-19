@@ -1,0 +1,81 @@
+*{
+
+}
+#wrapper {
+  width: 100%;
+  height: 100%;
+}
+#header {
+  background-color: #F6F6F6;
+  height: 80px;
+}
+
+
+#mypic{
+  height: 300px;
+  border: 6px solid gray;
+  display: inline-block;
+  margin: 15px;
+
+  }
+
+
+
+#myabout{
+  height: 310px;
+  width: 690px;
+  background-color: #ECE4EB;
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px;
+}
+
+.heading_about {
+  background-color: #9796A0;
+  color: white;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+
+}
+
+p{
+  padding: 4px;
+  margin: 4px;
+
+}
+
+.heading{
+  background-color: #9796A0;
+  color: white;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+
+
+}
+
+#pic1{
+width: 350px;
+}
+
+.subcontents{
+  background-color: white;
+  height: 600px;
+  width: 350px;
+  margin: 13px;
+  display: inline-block;
+}
+
+#about_content{
+  background-color: #46333B;
+  height: 1800px;
+  padding: 10px;
+}
+
+#logo {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+
+}

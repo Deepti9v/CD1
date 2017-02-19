@@ -1,0 +1,98 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+  width: 970px; /* Otherwise picks 1280px */
+  margin: 0 auto; /* makes it as center */
+}
+
+#wrapper {
+  background-color: #4E3B43;
+}
+
+#header {
+background-color: #F4F4F4;
+}
+
+#header h3 {
+  float: right;
+  vertical-align: top;
+  display: inline;
+}
+
+#header h1 {
+  display: inline;
+}
+
+
+#mypic{
+  height: 300px;
+  border: 6px solid gray;
+  display: inline-block;
+  margin: 15px;
+  vertical-align: top;
+  }
+
+#myabout {
+  width : 430px;
+  height: 300px;
+  display: inline-block;
+  background-color: #E4D9E3;
+  margin: 15px; /*To move it away from other elements */
+}
+
+.heading_fancy{
+  background-color: #F4F4F4;
+  padding: 5px;
+}
+
+#myabout p {
+  padding: 20px;
+}
+
+#detailed_content {
+  margin: 15px;/*To move it away from other elements */
+  background-color: #E1D5E0;
+}
+.subcontents {
+  /*margin: 15px;/*To move it away from other elements */
+}
+
+#detailed_content {
+  width: 280px;
+  display: inline-block;
+}
+
+.med_pic {
+   width: 280px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+/*Quick way to make something center: display: block ; margin: auto */
+#submit {
+  display: block;
+  background-color: green;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+#footer {
+  background-color: #F4F4F4;
+  height: 50px;
+}
+
+#footer p
+{
+text-align: center;
+}
+
+a
+{
+  color: black;
+}

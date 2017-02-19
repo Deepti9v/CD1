@@ -1,0 +1,71 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+  width: 970px; /* Otherwise picks 1280px */
+  margin: 0 auto; /* makes it as center */
+}
+
+#wrapper {
+  background-color: #265175;
+  /*height: 20px;*/ /*If the page doesnt get the props cos there was no content */
+}
+
+#size {
+   display: block;
+   /*text-align: right;*/
+   margin-left: 90%;
+}
+
+#search {
+  background-color: black;
+  height: 50px;
+  width:200px;
+  display: inline-block;
+  margin-left:500px;
+  margin-top: 10px;
+}
+
+#pic {
+  width : 250px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#nav ul {
+  background-color : #497FAB;
+  width: 800px;
+  height: 40px;
+  list-style-type: none;
+  margin: auto; /*Align to center */
+}
+
+ #nav ul li {
+  display: inline-block;
+  padding: 15px 4px 4px 55px; /* pad it inside */
+}
+
+ #nav ul li a {
+  text-decoration:  none;
+}
+
+#text1 {
+display: inline-block;
+padding-left: 100px;
+padding-top: 20px;
+vertical-align: top;
+}
+
+#text2 {
+  display: inline-block;
+  width: 450px;
+  margin-left: 100px;
+  vertical-align: top;
+}
+
+#middle {
+  background-color: white;
+  height: 60px;
+}

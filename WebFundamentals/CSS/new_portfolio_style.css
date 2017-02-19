@@ -1,0 +1,70 @@
+*
+{
+margin: 0;
+padding: 0;
+}
+
+body{
+  width: 970px;
+  margin: 0px auto;
+  background: #;
+  background: -webgit gradient.
+  //w3schools gradient
+}
+
+header{
+  padding: 15px 20px;
+}
+h1 , h2 {inline block}
+
+
+move margins to right and left for headers OR
+float:right;
+//one element from other - margins
+//content from border - padding
+
+//To get all the elements in the center
+footer {
+  text-align: center;
+  padding:10px;
+
+}
+
+footer img {
+  width: 25px;
+  vertical-align: middle;
+  height: 25px;
+}
+
+footer p:first-child{
+ margin-bottom: 10px;
+}
+
+
+
+header{
+float: right;
+padding: 10px;
+}
+
+info_Section
+{
+inline bloc
+vertical top
+width =
+}
+
+//Now text is all towards left..lets see how this is fixed
+
+main .info_section .info_header
+{
+color: white
+background-color: #skdfj
+
+ }
+
+main .info_section *
+{
+  padding: 10px
+}
+//All the things insode the nfo_section should have this ppadding
