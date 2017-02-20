@@ -1,71 +1,162 @@
 * {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  width: 970px; /* Otherwise picks 1280px */
-  margin: 0 auto; /* makes it as center */
+    width: 970px;
+    /* Otherwise picks 1280px */
+    margin: 0 auto;
+    /* makes it as center */
 }
 
 #wrapper {
-  background-color: #265175;
-  /*height: 20px;*/ /*If the page doesnt get the props cos there was no content */
+    /*height: 20px;*/
+    /*If the page doesnt get the props cos there was no content */
 }
 
-#size {
-   display: block;
-   /*text-align: right;*/
-   margin-left: 90%;
+#header {
+    background-color: #265175;
+}
+
+#section p {
+    margin-left: 750px;
+}
+
+#section p a {
+    color: yellow;
 }
 
 #search {
-  background-color: black;
-  height: 50px;
-  width:200px;
-  display: inline-block;
-  margin-left:500px;
-  margin-top: 10px;
+    background-color: black;
+    height: 50px;
+    width: 250px;
+    display: inline-block;
+    margin-left: 400px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+#search input {
+    margin: 18px;
+    display: inline-block;
 }
 
 #pic {
-  width : 250px;
-  display: inline-block;
-  vertical-align: top;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
 }
 
-#nav ul {
-  background-color : #497FAB;
-  width: 800px;
-  height: 40px;
-  list-style-type: none;
-  margin: auto; /*Align to center */
+nav ul {
+    background-color: #497FAB;
+    width: 800px;
+    height: 40px;
+    list-style-type: none;
+    margin: auto;
+    /*Align to center */
+    border-radius: 15px;
 }
 
- #nav ul li {
-  display: inline-block;
-  padding: 15px 4px 4px 55px; /* pad it inside */
+nav ul li {
+    display: inline-block;
+    padding: 15px 4px 4px 55px;
+    /* pad it inside */
 }
 
- #nav ul li a {
-  text-decoration:  none;
+nav ul li a {
+    text-decoration: none;
+    color: white;
 }
 
 #text1 {
-display: inline-block;
-padding-left: 100px;
-padding-top: 20px;
-vertical-align: top;
+    display: inline-block;
+    padding-left: 100px;
+    padding-top: 20px;
+    vertical-align: top;
+    margin-top: 20px;
+}
+
+#text1 ul {
+    text-align: center;
+    list-style-position: inside;
 }
 
 #text2 {
-  display: inline-block;
-  width: 450px;
-  margin-left: 100px;
-  vertical-align: top;
+    display: inline-block;
+    width: 450px;
+    margin-left: 100px;
+    vertical-align: top;
+    margin-top: 20px;
+}
+
+#text2 p:last-child {
+    color: yellow;
+    padding: 40px;
 }
 
 #middle {
-  background-color: white;
-  height: 60px;
+    background-color: white;
+    height: 60px;
+}
+
+.block_style {
+    margin-top: 20px;
+    border-top: solid 10px #497FAB;
+    height: 200px;
+    width: 400px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.block_style h4 {
+    margin: 10px;
+}
+
+.block_style ul {
+    padding-left: 100px;
+    margin: 10px;
+}
+
+.block_style ul li {
+    list-style-type: square;
+    color: #497FAB;
+}
+
+
+/* Need to have the outer wrapper to align the elements to center: hack*/
+
+#wrapper_for_blocks {
+    text-align: center;
+}
+
+footer {
+    height: 100px;
+    background-color: #497FAB;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    position: relative;
+    top: 20%;
+    /*Please remember this,what u did to center nav options  */
+    /*margin-top: 30px; /*Align to center */
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 20px 4px 4px 55px;
+    /* pad it inside */
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    margin-top: 40px;
+    text-align: center;
 }
