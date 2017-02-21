@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -9,100 +9,185 @@ body {
 }
 
 #header img {
-  width: 100px;
-  display: inline-block;
+    width: 100px;
+    display: inline-block;
 }
 
 #header span {
-  display: inline-block;
-  margin-top: 1px;
+    display: inline-block;
+    margin-top: 1px;
 }
 
 #header h1 {
-  height: 40px;
-  background-color: #3570A1;
-  color: white;
-  padding: 17px;
+    height: 40px;
+    background-color: #3570A1;
+    color: white;
+    padding: 17px;
 }
 
 #header span {
-  font-size: 40px;
+    font-size: 40px;
 }
+
 
 /*Width of each of the element under nav needs to be stretched too*/
-/*If you need one by one, say display: block*/
+
+
+/*If you need one by one(below), say display: block*/
+
+
 /*Also, you dont want to worry about positioning every element*/
+
 nav * {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 200px;
-  display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    display: block;
 }
+
+
 /*For the whole block*/
-nav {
-  display: inline-block;
-  width: 200px;
 
+nav {
+    display: inline-block;
+    width: 200px;
 }
 
 
+/*also, found out this: first-of-type unlike the first-child, which picks the first child */
+
+
+/* Trick for buttons : remove the border, do a padding, give a background colour, this makes it bigger and styled*/
+
+
+/*nav input:nth-of-type(1){*/
+/* Button Styling */
+nav input:first-of-type {
+    font-size: 20px;
+    padding: 10px 32px;
+    /*Only two, means top and bottom */
+    background-color: #558DB8;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+nav input:last-of-type {
+    font-size: 20px;
+    padding: 10px 32px;
+    /*Only two, means top and bottom */
+    background-color: #ED8219;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+nav #image_holder input:first-of-type {
+    font-size: 20px;
+    padding: 5px 16px;
+    /*Only two, means top and bottom */
+    background-color: #67CEDE;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
 
 #image_holder {
-  background-image: url('../assets/Internet_images/ad_background.png');
-  height: 400px;
+    background-image: url('../assets/Internet_images/ad_background.png');
+    height: 400px;
 }
-#image_holder img{
-  height: 200px;
-  width: 100px;
-  position: relative;
-  top: 70px;
-  left: 15px;
-}
-
-#image_holder p{
-color: white;
-
-
-}
-
-
-
 
 #image_holder img {
-  width: 150px;
+    height: 200px;
+    width: 100px;
+    position: relative;
+    left: 15px;
 }
 
+#image_holder p {
+    color: white;
+    position: relative;
+    top: 20px;
+    font-size: 26px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#image_holder img {
+    width: 150px;
+}
 
 #info_section {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 100px;
-  width: 660px;
-}
-#info_section #block1 img{
-  width: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 100px;
+    width: 660px;
 }
 
-#info_section #block3 img{
-   width: 20px;
+#info_section #block1 img {
+    width: 30px;
+}
+
+#info_section #block3 img {
+    width: 20px;
 }
 
 #block1 {
-  display: inline-block;
+    display: inline-block;
 }
 
-
 #block3 {
-  display: inline-block;
-  margin-left: 390px;
-  margin-top: 1px;
-  vertical-align: top;
+    display: inline-block;
+    margin-left: 300px;
+    margin-top: 1px;
+    vertical-align: top;
+}
+
+#info_section #client_text {
+    border-top: 1px solid black;
+    padding-top: 6px;
 }
 
 #info_section #client_text img {
-  width: 400px;
-  margin-left: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+#more_details {
+    border-top: 10px solid #0087DD;
+    border-left: 10px solid #0087DD;
+    border-right: 10px solid #0087DD;
+}
+
+#more_details * {
+    padding: 10px;
+    margin: 5px;
+}
+
+#more_details img {
+    width: 90px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+/*Sometimes, using just float:right doesnt work, got to use both */
+
+#more_details right_content {
+    float: right;
+    width: 200px;
+}
+
+
+/*If the child element is moving the whole parent , when u set margin
+for child, 1) Either do display: inline-block; for the parent
+2) Or do top and position:relative for the child;
+*/
+
+
+/* A quick way to move elements to right or left, 1) in case they are not natural inline elements
+and 2) we don't want to use inline block for both the div containers, 3)and dont want to
+use margin either, the solution is => float:right .
