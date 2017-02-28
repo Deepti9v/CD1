@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>slideDown demo</title>
+  <style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+  #wrapper {
+    width: 500px;
+    height: 900px;
+    margin: 0 auto;
+    background-color: white;
+  }
+
+  #header {
+    width: 500px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: teal;
+  }
+
+
+
+.demo {
+  border-bottom: 2px solid teal;
+  height: 150px;
+}
+
+.demo input{
+  border: none;
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  width: 100px;
+  background-color: teal;
+  color: white;
+}
+
+
+.demo #details {
+display: inline-block;
+}
+
+.addClass_red {
+  color: red;
+}
+
+.box9 {
+  width : 20px;
+  height: 20px;
+  background-color: teal;
+  display: none;
+}
+
+.box10 {
+  width : 20px;
+  height: 20px;
+  background-color: teal;
+}
+
+#img15 {
+ width: 200px;
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#addClass').click(function() {
+            $('#id1').addClass('addClass_red');
+        });
+
+        $('#showHide').click(function() {
+            $('#id3').hide();
+        });
+
+        $('#showShow').click(function() {
+            $('#id4').show();
+        });
+
+        $('#showToggle').click(function() {
+            $('#id5').toggle();
+        });
+
+        $('#showSlideDown').click(function() {
+            if ($('#id6').is(':hidden'))
+                $('#id6').slideDown("slow");
+            else
+                $('#id6').hide();
+        });
+
+        $('#showSlideUp').click(function() {
+            if ($('#id7').is(':hidden'))
+                $('#id7').slideUp();
+            else
+                $('#id7').hide();
+        });
+
+        $('#showSlideToggle').click(function() {
+            $('#id8').slideToggle();
+        });
+
+        $('#showFadeIn').click(function() {
+            $('#id9').fadeIn('slow');
+        });
+
+        $('#showFadeOut').click(function() {
+            $('#id10').fadeOut('slow');
+        });
+
+        $('#showBefore').click(function() {
+            $('#id11').before('<b> Hello , this one is recently added </b>')
+        });
+
+        $('#showAfter').click(function() {
+            $('#id12').after('<b> Hello, this got added after');
+        });
+        //Adds as the first child element under a tag <div> </div>
+        $('#showAppend').click(function() {
+            alert("here");
+            $('.cl13').append('<b> Appending </b>');
+        });
+        //This is to change the content inside a tag
+        $('#showHTML').click(function() {
+            // alert("here");
+            $('#id14').html('<b> html replaces the whole content inside the tag</b>');
+            //  $('.cl13').append('<b> Appending </b>');
+        });
+
+        $('#showAttr').click(function() {
+            $('#img15').attr({
+                alt: "no title",
+                width: "20px",
+                height: "20px"
+            });
+        });
+
+        $('#showVal').click(function() {
+            var selected = $('#first16').val();
+            $('#p16').html("selected values are:" + selected);
+        });
+
+        $('#showText').click(function() {
+            var val = $('#id17').text();
+            $('#output17').html(val);
+        });
+
+        $('#showData').click(function() {
+            $("#datatag").data("Data", {
+                first: "good morning",
+                second: "brush your teeth"
+            });
+            $("#sp1").text($("#datatag").data("Data").first);
+            $("#sp2").text($("#datatag").data("Data").second);
+        });
+
+    }); //Document ready end
+</script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="header">
+        </div>
+
+        <div class="demo">
+            <input type="button" id="addClass" value="AddClass" />
+            <div id="details">
+                <h3> add class </h3>
+                <p id="id1"> Click the button to add class red to this paragraph </p>
+            </div>
+        </div>
+
+
+
+        <div class="demo">
+            <input type="button" id="showClick" value="Click" />
+            <div id="details">
+                <h3> Click here </h3>
+                <p> Click here to see the click happen </p>
+            </div>
+        </div>
+
+
+
+        <div class="demo">
+            <input type="button" id="showHide" value="Hide" />
+            <div id="details">
+                <h3> Hide  </h3>
+                <p id="id3"> Click here to hide this text </p>
+            </div>
+        </div>
+
+
+        <div class="demo">
+            <input type="button" id="showShow" value="Show" />
+            <div id="details">
+                <h3> Show  </h3>
+                <p id="id4" style="display: none"> Click here to show this text </p>
+            </div>
+        </div>
+
+        <div class="demo">
+            <input type="button" id="showToggle" value="Toggle" />
+            <div id="details">
+                <h3> Toggle  </h3>
+                <p id="id5"> Click here to toggle this text </p>
+            </div>
+        </div>
+
+        <div class="demo">
+            <input type="button" id="showSlideDown" value="SlideDown" />
+            <div id="details">
+                <h3> SlideDown  </h3>
+                <p id="id6"> Click here to show slide down on this text </p>
+            </div>
+        </div>
+
+        <div class="demo">
+            <input type="button" id="showSlideUp" value="SlideUp" />
+            <div id="details">
+                <h3> SlideUp  </h3>
+                <p id="id7"> Click here to show slide up on this text </p>
+            </div>
+        </div>
+
+
+        <div class="demo">
+            <input type="button" id="showSlideToggle" value="SlideToggle" />
+            <div id="details">
+                <h3> SlideToggle  </h3>
+                <p id="id8"> Click here to show slide toggle on this text </p>
+            </div>
+        </div>
+
+        <div class="demo">
+            <input type="button" id="showFadeIn" value="FadeIn" />
+            <div id="details">
+                <h3> Fade In  </h3>
+                <div class="box9" id="id9"> </div>
+                <p> Click here to show Fade in on this text </p>
+            </div>
+        </div>
+
+        <div class="demo">
+            <input type="button" id="showFadeOut" value="FadeOut" />
+            <div id="details">
+                <h3> Fade Out  </h3>
+                <div class="box10" id="id10"> </div>
+                <p> Click here to show Fade out on this text </p>
+            </div>
+        </div>
+
+        <div class="demo">
+            <input type="button" id="showBefore" value="Before" />
+            <div id="details">
+                <h3> adding some thing before  </h3>
+                <p id="id11"> Click here to add text before this text </p>
+            </div>
+        </div>
+
+        <!--After -->
+        <div class="demo">
+            <input type="button" id="showAfter" value="After" />
+            <div id="details">
+                <h3> Before  </h3>
+                <p id="id12"> Click here to demo after method</p>
+            </div>
+        </div>
+
+        <!--Append -->
+        <div class="demo">
+            <div id="details">
+                <input type="button" id="showAppend" value="append" />
+                <div class="cl13">
+                    <h3> 1  </h3>
+                    <p> Click here to demo append method </p>
+                </div>
+                <div class="cl13">
+                    <h3> 2  </h3>
+                    <p> Click here to demo append method </p>
+                </div>
+            </div>
+        </div>
+
+        <!--HTML -->
+        <div class="demo">
+            <input type="button" id="showHTML" value="html" />
+            <div id="details">
+                <h3> HTML  </h3>
+                <p id="id14"> Click here to demo .html </p>
+            </div>
+        </div>
+
+        <!--ATTR -->
+        <div class="demo">
+            <input type="button" id="showAttr" value="attr" />
+            <div id="details">
+                <h3> Attr  </h3>
+                <p> Click here to demo .attr method </p>
+                <img id="img15" src="../assets/Python_images/python.png" />
+            </div>
+        </div>
+
+        <!--Val -->
+        <div class="demo">
+            <input type="button" id="showVal" value="val" />
+            <div id="details">
+                <h3> Val  </h3>
+                <p id="p16"> Click here to demonstrate .val method </p>
+                <select id="first16">
+              <option> first value </option>
+              <option> second value </option>
+            </select>
+
+            </div>
+        </div>
+
+        <!--text -->
+        <div class="demo">
+            <input type="button" id="showText" value="text" />
+            <div id="details">
+                <h3 id="id17"> text demo - press the button  </h3>
+                <p> Click here to add .text method </p>
+                <p id="output17"> </p>
+            </div>
+        </div>
+
+
+        <!--data -->
+        <div class="demo">
+            <input type="button" id="showData" value="Data" />
+            <div id="details">
+                <div id="datatag">
+                    <h3> Before  </h3>
+                    <p> Click here to use the .data method </p>
+                    <span id="sp1"> </span>
+                    <span id="sp2"> </span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+    </script>
+
+</body>
+
+</html>

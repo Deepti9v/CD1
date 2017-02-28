@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> demo</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: 970px;
+            margin: 0 auto;
+        }
+
+        #wrapper {
+            width: 970px;
+            height: 900px;
+            margin: 0 auto;
+            background-color: gray;
+        }
+
+        div {
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+        }
+
+        .image {
+            width: 200px;
+            text-align: center;
+            margin: 15px;
+            /*Any way to center elements automatically, without having to set margin?*/
+        }
+
+        .input {
+            margin: auto 0;
+            /*Why cant i move this to the center? */
+        }
+    </style>
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('img').click(function() {
+                $(this).hide();
+            });
+
+            $('#restore').click(function() {
+                $('img').show();
+            });
+
+        }); //Document ready end
+    </script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div> <img id="i1" class="image" src="../assets/Internet_images/ninja.png" /> </div>
+        <div> <img id="i2" class="image" src="../assets/Internet_images/ninja.png" /> </div>
+        <div> <img id="i3" class="image" src="../assets/Internet_images/ninja.png" /> </div>
+        <div> <img id="i4" class="image" src="../assets/Internet_images/ninja.png" /> </div>
+        <div> <img id="i5" class="image" src="../assets/Internet_images/ninja.png" /> </div>
+        <div> <img id="i6" class="image" src="../assets/Internet_images/ninja.png" /> </div>
+        <div> <img id="i7" class="image" src="../assets/Internet_images/ninja.png" /> </div>
+        <div> <img id="i8" class="image" src="../assets/Internet_images/ninja.png" /> </div>
+        <input type="button" id="restore" Value="Restore the Ninjas and bring peace" />
+    </div>
+
+
+
+
+
+</body>
+
+</html>

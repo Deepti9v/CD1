@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        width: 970px;
+        margin: 0 auto;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        padding: 4px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('img').click(function(){
+            var attribute = $(this).attr('data-alt-src');
+            $(this).attr("src",attribute);
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="wrapper">
+        <img src="../assets/ninja-cat/cat0.png" data-alt-src="../assets/ninja-cat/ninja0.png"/>
+        <img src="../assets/ninja-cat/cat1.png" data-alt-src="../assets/ninja-cat/ninja1.png"/>
+        <img src="../assets/ninja-cat/cat2.png" data-alt-src="../assets/ninja-cat/ninja2.png"/>
+        <img src="../assets/ninja-cat/cat3.png" data-alt-src="../assets/ninja-cat/ninja3.png"/>
+        <img src="../assets/ninja-cat/cat4.png" data-alt-src="../assets/ninja-cat/ninja4.png"/>
+    </div>
+
+  </body>
+</html>
