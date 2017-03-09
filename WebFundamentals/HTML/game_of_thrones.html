@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        * {
+            font-family: 'sans serif';
+            font-size: 18px;
+            color: white;
+        }
+
+
+        input,
+        textarea {
+            color: black;
+        }
+
+        body {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #wrapper {
+            width: 1200px;
+            height: 900px;
+            margin: 0 auto;
+        }
+
+        img {
+          display: inline-block;
+          height: 200px;
+          width: 250px;
+          padding: 0px 20px;
+          /*margin-left: 42px;  /*Is there a way to center margin left without margin left */*/
+        }
+
+
+        #display_content {
+            display: inline-block;
+            width: 800px;
+            background-color: #4CBCAC;
+            height: 400px;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(document).on('click', 'img', function() {
+              var name = encodeURIComponent(this.id);
+              alert(name);
+                var url="http://www.anapioficeandfire.com/api/houses?name="+name;
+              console.log(url);
+              $.get(url,function(res){
+                console.log(res);
+              },'json');
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="houses">
+          <img src="../assets/gameofthrones/baratheon.png" id="House Algood" />
+          <img src="../assets/gameofthrones/lannister.jpg" />
+          <img src="../assets/gameofthrones/stark.jpg" />
+          <img src="../assets/gameofthrones/targaryen.jpg" />
+        </div>
+        <div id="display_content">
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

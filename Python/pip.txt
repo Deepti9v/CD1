@@ -1,0 +1,24 @@
+pip install Django -> Installs Django else if Django is already installed it will
+give a message that its already installed and to upgrade if necessary.
+
+pip list -> List all the components installed and their current versions
+
+pip install Django --> Same as above.
+
+pip freeze --> Lists the components installed in a specified format.
+
+pip freeze > requirements.txt --> takes the output of pip freeze and writes it to
+requirements.txt file.
+
+ls -> lists requirements.txt as well
+
+inside of the file has the output from pip freeze, which is the list of components
+and the versions in a specific format, that will enable us to install the
+requirements in a different environment.
+
+pip show Django --> Shows the version of Django and all the other details specific
+to it.
+
+pip uninstall Django --> uninstalls Django
+
+pip search Flask --> searches for Flask in the packages or in the description.

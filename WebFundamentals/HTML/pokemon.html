@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        * {
+            font-family: 'sans serif';
+            font-size: 18px;
+            color: teal;
+            margin: 5px;
+            text-align: left;
+        }
+
+        ul {
+            type
+        }
+
+        input,
+        textarea {
+            color: black;
+        }
+
+        body {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #wrapper {
+            width: 1000px;
+            height: 900px;
+            margin: 0 auto;
+        }
+
+        #pokemons {
+            width: 700px;
+            display: inline-block;
+        }
+
+        #pokedox {
+            width: 180px;
+            height: 400px;
+            display: inline-block;
+            vertical-align: top;
+            border: solid 5px teal;
+        }
+
+        #pokedox * {
+          text-align: center;
+        }
+        /*question:  scenario: click on the image, check the right box :
+        how do i make all the text to move to the center? Using the above code
+        only moves the elements with tags, but if there are not under any tag, like the
+        values of height we are receiving from the API, is there any way we can center it?*/
+
+        img {
+            width: 120px;
+            margin: 0 auto;
+        }
+        /*question: scenario: click on the image, check the right box :
+        how do i center the image in the blue box on the right?. Margin Auto doesnt help*/
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function() {
+            //
+            // $.ajax({
+            //   url: "https://api.github.com/users/TEnders64",
+            //   method: "GET",
+            //   success: function(response){
+            //     console.log(response);
+            //     var fields = {
+            //       name: response['name'],
+            //       location: response['location'],
+            //       description: response.bio
+            //     }
+            //     var card = ""
+            //     card += fields.name;
+            //     card += fields.location;
+            //     console.log(card);
+            //   }
+            // });
+            for (var i = 1; i <= 152; i++) {
+                $('#pokemons').append("<img id='" + i + "'src='http://pokeapi.co/media/img/" + i + ".png'>");
+            }
+
+
+
+            $('img').click(function() {
+                var image = "<img src='http://pokeapi.co/media/img/" + this.id + ".png'>"
+                $('#pokedox').html(''); //Clear everything
+                $('#pokedox').append(image);
+                $.get("http://pokeapi.co/api/v1/pokemon/" + this.id, function(res) {
+                    console.log(res.name);
+                    console.log(res.types[0].name);
+                    console.log(res.height);
+                    console.log(res.weight);
+                    var html_res = "";
+                    html_res += "<h4> Name </h4>";
+                    html_res += res.name;
+                    html_res += "<h4> types </h4>";
+                    html_res += "<ul>";
+                    for (var i = 0; i < res.types.length; i++) {
+                        html_res += "<li>" + res.types[i].name + "</li>";
+                    }
+                    html_res += "</ul>";
+                    html_res += "<h4> height </h4>";
+                    html_res += res.height;
+                    html_res += "<h4> Weight </h4>";
+                    html_res += res.weight;
+                    $("#pokedox").append(html_res);
+                }, 'json');
+            });
+
+
+
+
+
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="pokemons">
+        </div>
+        <div id="pokedox">
+        </div>
+    </div>
+
+
+</body>
+
+</html>

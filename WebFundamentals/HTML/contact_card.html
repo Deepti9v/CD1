@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        * {
+            font-family: 'sans serif';
+            font-size: 18px;
+            color: white;
+        }
+
+        input,
+        textarea {
+            color: black;
+        }
+
+        body {
+            width: 970px;
+            margin: 0 auto;
+        }
+
+        #wrapper {
+            width: 800px;
+            height: 900px;
+            margin: 0 auto;
+        }
+
+        #create_contact {
+            display: inline-block;
+            width: 400px;
+            background-color: #4CBCAC;
+            height: 400px;
+        }
+
+        #display_contact {
+            display: inline-block;
+            width: 300px;
+            vertical-align: top;
+        }
+
+        .card {
+            height: 70px;
+            background-color: #FC4A1A;
+            text-align: center;
+        }
+
+        .section {
+            margin: 20px;
+        }
+
+        #submit {
+            border: none;
+            background-color: #FC4A1A;
+            padding: 10px 10px 10px 10px;
+            text-align: center;
+            margin-left: 200px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(document).on('click', '.card', function() {
+                $(this).children('.front').toggle();
+                $(this).children('.back').toggle();
+            });
+
+            $('#form1').submit(function() {
+                event.preventDefault();
+                $('#display_contact').append(
+                    '<div class="card">' +
+                    '<p class="front">' + $('input[name=first_name]').val() + '</p>' +
+                    '<p class="front">' + $('[name=last_name]').val() + '</p>' +
+                    '<p class="back" style="display: none">' + $('[name=description]').val() + '</p>' +
+                    '</div>');
+                $('input[name=first_name], input[name=last_name], [name=description]').val('');
+
+            });
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="create_contact">
+            <form id="form1">
+                <div class="section">
+                    <label for="first name">  First Name </label>
+                    <input type="text" name="first_name" />
+                </div>
+                <div class="section">
+                    <label for="Last name">  Last Name </label>
+                    <input type="text" name="last_name" />
+                </div>
+
+                <div class="section">
+                    <label for="description"> Description </label>
+                    <textarea rows="4" cols="30" name="description">
+                    </textarea>
+                </div>
+
+                <div class="section">
+                    <input type="submit" value="submit" id="submit" />
+                </div>
+            </form>
+
+        </div>
+        <div id="display_contact">
+            <div class="card">
+                <p class="front"> Deepti Velusamy </p>
+                <p class="front"> Click for description </p>
+                <p class="back" style="display: none"> Fearless leader and Master of instruction </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
